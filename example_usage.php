@@ -140,12 +140,12 @@ $graph->addEdge(2, 0);
 $graph->addEdge(2, 3);
 $graph->addEdge(3, 3);
 
-// Perform Breadth-First Search (BFS) starting from vertex 2
 echo "Breadth First Search starting from vertex 2: ";
-$graph->breadthFirstSearch(2);
+// Call BFS function statically
+Graph::breadthFirstSearch($graph, 2);
 echo "\n";
 
-// Perform Depth-First Search (DFS) starting from vertex 2
 echo "Depth First Search starting from vertex 2: ";
-$graph->depthFirstSearch(2);
+// Call DFS function statically
+Graph::depthFirstSearch($graph, 2);
 echo "\n";

@@ -80,6 +80,50 @@ echo "Sleep Sort: " . implode(", ", SortingAlgorithms::sleepSort($arr)) . "\n";
 ?>
 ```
 
+
+## Usage
+
+1. **Graph Class**: The `Graph` class represents a graph and provides methods for adding edges and performing Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms.
+
+    ```php
+    <?php
+    
+    // Include the Graph class file
+    include 'include/graph.php';
+    
+    // Create a graph with 5 vertices
+    $graph = new Graph(5);
+
+    // Add edges to the graph
+    $graph->addEdge(0, 1);
+    $graph->addEdge(0, 2);
+    $graph->addEdge(1, 2);
+    $graph->addEdge(2, 0);
+    $graph->addEdge(2, 3);
+    $graph->addEdge(3, 3);
+
+    echo "Breadth First Search starting from vertex 2: ";
+    // Call BFS function statically
+    Graph::breadthFirstSearch($graph, 2);
+    echo "\n";
+
+    echo "Depth First Search starting from vertex 2: ";
+    // Call DFS function statically
+    Graph::depthFirstSearch($graph, 2);
+    echo "\n";
+    
+    ?>
+    ```
+
+## Graph Class Methods
+
+- `__construct($vertices)`: Constructor to initialize the graph with a given number of vertices.
+- `addEdge($src, $dest)`: Method to add an edge between two vertices.
+- `breadthFirstSearch($start)`: Method to perform Breadth-First Search (BFS) traversal starting from a given vertex.
+- `depthFirstSearch($start)`: Method to perform Depth-First Search (DFS) traversal starting from a given vertex.
+
+
+
 ### Contributing
 
 Contributions are welcome! If you'd like to contribute to this repository, please fork the project, make your changes, and submit a pull request.
