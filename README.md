@@ -94,7 +94,7 @@ echo "Sleep Sort: " . implode(", ", SortingAlgorithms::sleepSort($arr)) . "\n";
 ### Usage
 
 
-    ```php
+```php
     <?php
     
     // Include the Graph class file
@@ -122,7 +122,7 @@ echo "Sleep Sort: " . implode(", ", SortingAlgorithms::sleepSort($arr)) . "\n";
     echo "\n";
     
     ?>
-    ```
+```
 
 
 
