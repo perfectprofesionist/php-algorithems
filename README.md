@@ -81,7 +81,6 @@ echo "Sleep Sort: " . implode(", ", SortingAlgorithms::sleepSort($arr)) . "\n";
 ```
 
 
-## Usage
 
 1. **Graph Class**: The `Graph` class represents a graph and provides methods for adding edges and performing Breadth-First Search (BFS) and Depth-First Search (DFS) algorithms.
 
