@@ -1,47 +1,86 @@
-# Searching Algorithms in PHP
+## Sorting and Searching Algorithms in PHP
 
-This repository contains PHP code implementing various searching algorithms, including linear search, binary search, interpolation search, exponential search, jump search, and ternary search.
+This repository contains implementations of various sorting and searching algorithms in PHP.
 
-## Overview
+### Sorting Algorithms
 
-Searching algorithms are used to locate a specific item or element within a data structure, such as an array. These algorithms are crucial in computer science and are used in many applications, including database queries, web searches, and more.
+- **Bubble Sort**: `bubbleSort($array)`
+- **Selection Sort**: `selectionSort($array)`
+- **Insertion Sort**: `insertionSort($array)`
+- **Merge Sort**: `mergeSort($array)`
+- **Quick Sort**: `quickSort($array)`
+- **Heap Sort**: `heapSort($array)`
+- **Shell Sort**: `shellSort($array)`
+- **Radix Sort**: `radixSort($array)`
+- **Counting Sort**: `countingSort($array)`
+- **Bucket Sort**: `bucketSort($array)`
+- **Cocktail Shaker Sort**: `cocktailShakerSort($array)`
+- **Comb Sort**: `combSort($array)`
+- **Gnome Sort**: `gnomeSort($array)`
+- **Cycle Sort**: `cycleSort($array)`
+- **Pancake Sort**: `pancakeSort($array)`
+- **Bogosort**: `bogoSort($array)`
+- **Stooge Sort**: `stoogeSort($array)`
+- **Bead Sort**: `beadSort($array)`
+- **Sleep Sort**: `sleepSort($array)`
 
-In this repository, we provide PHP implementations of several commonly used searching algorithms. Each algorithm is implemented as a static method within the `SearchingAlgorithms` class.
+### Searching Algorithms
 
-## Files
+- **Linear Search**: `linearSearch($arr, $x)`
+- **Binary Search**: `binarySearch($arr, $x)`
+- **Interpolation Search**: `interpolationSearch($arr, $x)`
+- **Exponential Search**: `exponentialSearch($arr, $x)`
+- **Jump Search**: `jumpSearch($arr, $x)`
+- **Ternary Search**: `ternarySearch($arr, $l, $r, $x)`
 
-- `searching_algorithms.php`: Contains the implementation of searching algorithms.
-- `example_usage.php`: Demonstrates the usage of the searching algorithms with example arrays and target values.
+### Usage
 
-## Usage
+```php
+<?php
 
-To use the searching algorithms in your PHP project:
+// Include the PHP file containing the SortingAlgorithms and SearchingAlgorithms classes
+include 'include/searching_algorithms.php';
+include 'include/sorting_algorithms.php';
 
-1. Include the `searching_algorithms.php` file in your PHP script:
+// Define an array and a target value for searching
+$arr = array(2, 3, 4, 10, 40);
+$x = 10;
 
-    ```php
-    include 'include/searching_algorithms.php';
-    ```
+// Perform various searching algorithms on the array
+echo "Linear Search: " . SearchingAlgorithms::linearSearch($arr, $x) . "\n";
+echo "Binary Search: " . SearchingAlgorithms::binarySearch($arr, $x) . "\n";
+echo "Interpolation Search: " . SearchingAlgorithms::interpolationSearch($arr, $x) . "\n";
+echo "Exponential Search: " . SearchingAlgorithms::exponentialSearch($arr, $x) . "\n";
+echo "Jump Search: " . SearchingAlgorithms::jumpSearch($arr, $x) . "\n";
+echo "Ternary Search: " . SearchingAlgorithms::ternarySearch($arr, 0, count($arr) - 1, $x) . "\n";
 
-2. You can then use the static methods of the `SearchingAlgorithms` class to perform various searches:
+// Define an array for sorting
+$arr = array(3, 1, 4, 1, 5, 9, 2, 6);
 
-    ```php
-    $arr = array(2, 3, 4, 10, 40);
-    $x = 10;
+// Perform various sorting algorithms on the array
+echo "Bubble Sort: " . implode(", ", SortingAlgorithms::bubbleSort($arr)) . "\n";
+echo "Selection Sort: " . implode(", ", SortingAlgorithms::selectionSort($arr)) . "\n";
+echo "Insertion Sort: " . implode(", ", SortingAlgorithms::insertionSort($arr)) . "\n";
+echo "Merge Sort: " . implode(", ", SortingAlgorithms::mergeSort($arr)) . "\n";
+echo "Quick Sort: " . implode(", ", SortingAlgorithms::quickSort($arr)) . "\n";
+echo "Heap Sort: " . implode(", ", SortingAlgorithms::heapSort($arr)) . "\n";
+echo "Shell Sort: " . implode(", ", SortingAlgorithms::shellSort($arr)) . "\n";
+echo "Radix Sort: " . implode(", ", SortingAlgorithms::radixSort($arr)) . "\n";
+echo "Counting Sort: " . implode(", ", SortingAlgorithms::countingSort($arr)) . "\n";
+echo "Bucket Sort: " . implode(", ", SortingAlgorithms::bucketSort($arr)) . "\n";
+echo "Cocktail Shaker Sort: " . implode(", ", SortingAlgorithms::cocktailShakerSort($arr)) . "\n";
+echo "Comb Sort: " . implode(", ", SortingAlgorithms::combSort($arr)) . "\n";
+echo "Gnome Sort: " . implode(", ", SortingAlgorithms::gnomeSort($arr)) . "\n";
+echo "Cycle Sort: " . implode(", ", SortingAlgorithms::cycleSort($arr)) . "\n";
+echo "Pancake Sort: " . implode(", ", SortingAlgorithms::pancakeSort($arr)) . "\n";
+echo "Bogosort: " . implode(", ", SortingAlgorithms::bogoSort($arr)) . "\n";
+echo "Stooge Sort: " . implode(", ", SortingAlgorithms::stoogeSort($arr)) . "\n";
+echo "Bead Sort: " . implode(", ", SortingAlgorithms::beadSort($arr)) . "\n";
+echo "Sleep Sort: " . implode(", ", SortingAlgorithms::sleepSort($arr)) . "\n";
+?>
+```
 
-    // Example usage
-    echo "Linear Search: " . SearchingAlgorithms::linearSearch($arr, $x) . "\n";
-    echo "Binary Search: " . SearchingAlgorithms::binarySearch($arr, $x) . "\n";
-    echo "Interpolation Search: " . SearchingAlgorithms::interpolationSearch($arr, $x) . "\n";
-    echo "Exponential Search: " . SearchingAlgorithms::exponentialSearch($arr, $x) . "\n";
-    echo "Jump Search: " . SearchingAlgorithms::jumpSearch($arr, $x) . "\n";
-    echo "Ternary Search: " . SearchingAlgorithms::ternarySearch($arr, 0, count($arr) - 1, $x) . "\n";
-    
-    ```
+### Contributing
 
-3. Replace `$arr` with your array and `$x` with your target value. You can perform different searches based on your requirements.
-
-## Contributing
-
-Contributions to improve the code or add new searching algorithms are welcome! Feel free to open a pull request or submit an issue if you have any suggestions or feedback.
+Contributions are welcome! If you'd like to contribute to this repository, please fork the project, make your changes, and submit a pull request.
 
