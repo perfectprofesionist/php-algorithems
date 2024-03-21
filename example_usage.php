@@ -1,7 +1,7 @@
 <?php
 
 // Include the PHP file containing the SearchingAlgorithms class
-include 'searching_algorithms.php';
+include 'include/searching_algorithms.php';
 
 // Example usage:
 // Define an array and a target value for searching
