@@ -3,6 +3,7 @@
 // Include the PHP file containing the SearchingAlgorithms class
 include 'include/searching_algorithms.php';
 include 'include/sorting_algorithms.php';
+include 'include/graph.php';
 
 // Example usage:
 // Define an array and a target value for searching
@@ -125,3 +126,26 @@ echo "Bead Sort: " . implode(", ", SortingAlgorithms::beadSort($arr)) . "\n";
 $arr = array(3, 1, 4, 1, 5, 9, 2, 6);
 echo "Original Array: " . implode(", ", $arr) . "\n";
 echo "Sleep Sort: " . implode(", ", SortingAlgorithms::sleepSort($arr)) . "\n";
+
+
+
+// Create a graph with 5 vertices
+$graph = new Graph(5);
+
+// Add edges to the graph
+$graph->addEdge(0, 1);
+$graph->addEdge(0, 2);
+$graph->addEdge(1, 2);
+$graph->addEdge(2, 0);
+$graph->addEdge(2, 3);
+$graph->addEdge(3, 3);
+
+// Perform Breadth-First Search (BFS) starting from vertex 2
+echo "Breadth First Search starting from vertex 2: ";
+$graph->breadthFirstSearch(2);
+echo "\n";
+
+// Perform Depth-First Search (DFS) starting from vertex 2
+echo "Depth First Search starting from vertex 2: ";
+$graph->depthFirstSearch(2);
+echo "\n";
