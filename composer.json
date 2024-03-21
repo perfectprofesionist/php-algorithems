@@ -1,6 +1,16 @@
 {
-    "require": {
-        "php": ">=7.4",
-        "ext-mbstring": "*"
-    }
+    "name": "wbc/php-algorithms",
+    "description": "This repository contains implementations of various algorithms in PHP.",
+    "autoload": {
+        "psr-4": {
+            "Wbc\\PhpAlgorithms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "perfectprofesionist",
+            "email": "perfectprofesionist@gmail.com"
+        }
+    ],
+    "require": {}
 }
